@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpx @11ty/eleventy --serve",
-    "build": "pnpx @11ty/eleventy && gulp buildDev"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy && gulp buildDev"
   },
   "keywords": [],
   "author": "",
