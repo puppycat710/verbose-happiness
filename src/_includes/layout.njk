@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html amp lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+    name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scripts AMP -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
+    <script async custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"></script>
+    {# SEO Pingu TV #}
+    <meta
+      name="keywords"
+      content="filmes, series, assistir filmes, assistir series, baixar filme, download filme, baixar serie, download serie,
+        filme dublado, series dublada, filme 2023, filme 2024, serie 2023, serie 2024, redecanais, megafilmeshd, netflix,
+        plutotv, hbo, hbomax, disney+, disney plus, star plus, paramount+, paramount, amazon prime, prime video, apple tv">
+    <meta name="description" content="Pingu TV">
+    <meta name="author" content="Pingu TV">
+    <link rel="canonical" href="$SOME_URL">
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    {% include "devTools.njk" %}
+    <!-- AMP Boilerplate -->
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden
+        }
+        to {
+          visibility: visible
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden
+        }
+        to {
+          visibility: visible
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden
+        }
+        to {
+          visibility: visible
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden
+        }
+        to {
+          visibility: visible
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden
+        }
+        to {
+          visibility: visible
+        }
+      }
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none
+        }
+      </style>
+    </noscript>
+    {% include "styles.njk" %}
+    <link rel="icon" type="image/png" href="https://codeberg.org/pingutv/cdn/raw/branch/main/favicon.png">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <main>
+      {% include "headerMenu.njk" %}
+      <div class="pt-[133px]">
+        {{ content | safe }}
+      </div>
+      {% include "footer.njk" %}
+    </main>
+    <!-- Carregue o JS após o HTML -->
+    <script defer src="/js/dev-tools.js"></script>
+    <script defer src="/js/amp.js"></script>
+    <script defer src="/js/search.js"></script>
+  </body>
+</html>

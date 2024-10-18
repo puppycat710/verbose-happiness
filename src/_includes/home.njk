@@ -1,0 +1,18 @@
+<div class="grid justify-center text-sm items-center p-4">
+  <amp-base-carousel
+    width="1200"
+    height="450"
+    class="sm:!w-[1200px] !w-[330px]"
+    layout="flex-item"
+    visible-count="(min-width: 800px) 4, 2"
+    advance-count="(min-width: 800px) 4, 2">
+    {% for movie in movies -%}
+      <a href="/filmes/{{movie.slug}}/">
+        <div class="flex flex-col gap-1 p-1">
+          <amp-img src={{movie.coverImage}} width="226" height="316" alt={{movie.slug}} layout="responsive"></amp-img>
+          <h1>{{ movie.title }}</h1>
+        </div>
+      </a>
+    {%- endfor %}
+  </amp-base-carousel>
+</div>

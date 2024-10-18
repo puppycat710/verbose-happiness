@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html amp lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+    name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Preload Styles -->
+    <link rel="preload" href="/css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+    <!-- Scripts AMP -->
+    <script src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
+    <meta http-equiv="Cache-Control" content="max-age=7776000"> <!-- 90 dias de cache -->
+    {# SEO Pingo TV #} <meta
+      name="keywords"
+      content="filmes, series, assistir filmes, assistir series, baixar filme, download filme, baixar serie, download serie,
+        filme dublado, series dublada, filme 2023, filme 2024, serie 2023, serie 2024, redecanais, megafilmeshd, netflix,
+        plutotv, hbo, hbomax, disney+, disney plus, star plus, paramount+, paramount, amazon prime, prime video, apple tv">
+    <meta name="description" content="Pingo TV">
+    <meta name="author" content="Pingo TV">
+    <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <!-- AMP Boilerplate -->
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style>
+    </noscript>
+    <link rel="icon" type="image/x-icon" href="https://codeberg.org/puppycat710/cdn/raw/branch/main/favicon.png">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <main>
+      {% include "headerMenu.njk" %}
+      {{ content | safe }}
+      {% include "footer.njk" %}
+    </main>
+    <!-- Carregue o JS após o HTML -->
+    <script src="/js/render-banner.js" defer></script>
+    <script src="/js/play-btn.js" defer></script>
+    <script src="/js/disqus.js" defer></script>
+    <script src="/js/amp.js" defer></script>
+    <script src="/js/search.js" defer></script>
+  </body>
+</html>

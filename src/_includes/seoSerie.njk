@@ -1,0 +1,11 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "TVSeries",
+  "name": "{{serie.title}}",
+  "genre": [{% for category in serie.categories %}"{{ category }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+  "url": "https://pingutv.codeberg.page/series/{{serie.slug}}/",
+  "inLanguage": "pt-BR",
+  "image": "{{serie.coverImage}}",
+}
+</script>
