@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy && gulp buildDev"
+    "build": "npm install && npx @11ty/eleventy && gulp buildDev"
   },
   "keywords": [],
   "author": "",
